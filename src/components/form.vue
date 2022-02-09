@@ -40,19 +40,6 @@
         <el-checkbox label="Simple brand exposure" name="type"></el-checkbox>
       </el-checkbox-group>
     </el-form-item>
-    <el-form-item label="Resources">
-      <el-radio-group v-model="form.resource">
-        <el-radio label="Sponsor"></el-radio>
-        <el-radio label="Venue"></el-radio>
-      </el-radio-group>
-    </el-form-item>
-    <el-form-item label="Activity form">
-      <el-input v-model="form.desc" type="textarea"></el-input>
-    </el-form-item>
-    <el-form-item>
-      <el-button type="primary" @click="onSubmit">Create</el-button>
-      <el-button>Cancel</el-button>
-    </el-form-item>
   </el-form>
 </template>
 <script scope setup>
@@ -98,7 +85,8 @@ const state = reactive({
   bar: 2
 })
 const stateAsRefs = toRefs(state)
-console.log(stateAsRefs);
+console.log('state', state);
+console.log('stateAsRefs', stateAsRefs);
 
 /** toRefs用法 将响应式对象转换为普通对象  end*/
 

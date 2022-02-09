@@ -4,7 +4,11 @@ const router = [
     component: () => import("@/components/form"),
   },
   {
-    path: "/views",
+    path: "/person",
+    component: () => import("@/components/input"),
+  },
+  {
+    path: "/record",
     component: () => import("@/views/indexRecord.vue"),
   },
 ];
